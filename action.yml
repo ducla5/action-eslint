@@ -14,6 +14,10 @@ inputs:
       Default is github-pr-check.
       github-pr-review can use Markdown and add a link to rule page in reviewdog reports.
     default: 'github-pr-check'
+  directory:
+    description: 'The subdirectory to execute the action in.'
+    default: '.'
+    required: false
   eslint_flags:
     description: "flags and args of eslint command. Default: '.'"
     default: '.'
