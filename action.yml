@@ -8,12 +8,14 @@ inputs:
   level:
     description: 'Report level for reviewdog [info,warning,error]'
     default: 'error'
+    required: false
   reporter:
     description: |
       Reporter of reviewdog command [github-pr-check,github-pr-review].
       Default is github-pr-check.
       github-pr-review can use Markdown and add a link to rule page in reviewdog reports.
     default: 'github-pr-check'
+    required: false
   directory:
     description: 'The subdirectory to execute the action in.'
     default: '.'
@@ -21,6 +23,7 @@ inputs:
   eslint_flags:
     description: "flags and args of eslint command. Default: '.'"
     default: '.'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
